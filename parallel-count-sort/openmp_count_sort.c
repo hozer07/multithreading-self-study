@@ -4,7 +4,7 @@
 #include <string.h>
 #include <omp.h>
 #include <sys/time.h>
-
+// Takes number of threads and array length from command line arguments
 double get_time(void);
 void parallel_count_sort(int* a, int array_len, int thread_cnt);
 void serial_count_sort(int* a, int array_len);
