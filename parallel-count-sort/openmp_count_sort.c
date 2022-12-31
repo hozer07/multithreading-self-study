@@ -31,7 +31,9 @@ int main(int argc, char* argv[])
 
     printf("Parallel Execution time (with %d threads): %f seconds.\nSerial execution time: %f seconds.\n",thread_cnt,parallel_exec_time,serial_exec_time);
     verify_equal_results(array_for_parallel , array_for_serial, array_len, thread_cnt);
-    //print_array(array_for_parallel, array_len);
+    // print_array(array_for_parallel, array_len);
+    free(array_for_parallel);
+    free(array_for_serial);
 }
 
 void get_array(int* array, int array_len)
